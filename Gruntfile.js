@@ -2,6 +2,7 @@ module.exports = function(grunt) {
 
     grunt.loadNpmTasks('grunt-closure-compiler');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
     grunt.initConfig({
         'closure-compiler': {
@@ -23,13 +24,25 @@ module.exports = function(grunt) {
                     'dist/style.css': 'app/style.css'
                 }
             }
+        },
+        htmlmin: { // Task htmlmin https://github.com/gruntjs/grunt-contrib-htmlmin
+            dist: { // Target
+                options: { // Target options
+                    removeComments: true,
+                    collapseWhitespace: true
+                },
+                files: { // Dictionary of files
+                    'dist/index.html': 'app/index.html' // 'destination': 'source'
+                }
+            }
         }
     });
 
     // Default task(s).
     grunt.registerTask('default', [
-      'closure-compiler',
-      'cssmin',
-      ]);
+        'closure-compiler',
+        'cssmin',
+        'htmlmin'
+    ]);
 
 };

@@ -7,6 +7,7 @@
   "devDependencies": {
     "grunt": "~0.4.2",
     "grunt-closure-compiler": "0.0.21",
-    "grunt-contrib-cssmin": "~0.7.0"
+    "grunt-contrib-cssmin": "~0.7.0",
+    "grunt-contrib-htmlmin": "~0.1.3"
   }
 }
