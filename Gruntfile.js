@@ -4,9 +4,11 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-jshint');
 
     grunt.initConfig({
-        'closure-compiler': { // grunt-closure-compiler https://github.com/gmarty/grunt-closure-compiler
+        // grunt-closure-compiler https://github.com/gmarty/grunt-closure-compiler
+        'closure-compiler': {
             frontend: {
                 closurePath: 'tools/closure',
                 js: 'app/calc.js',
@@ -18,15 +20,17 @@ module.exports = function(grunt) {
                 }
             }
         },
+        // grunt-contrib-cssmin vice na https://github.com/gruntjs/grunt-contrib-cssmin
         cssmin: {
-            // grunt-contrib-cssmin vice na https://github.com/gruntjs/grunt-contrib-cssmin
+
             minify: {
                 files: {
                     'dist/style.css': 'app/style.css'
                 }
             }
         },
-        htmlmin: { // Task htmlmin https://github.com/gruntjs/grunt-contrib-htmlmin
+        // Task htmlmin https://github.com/gruntjs/grunt-contrib-htmlmin
+        htmlmin: {
             dist: { // Target
                 options: { // Target options
                     removeComments: true,
@@ -37,25 +41,30 @@ module.exports = function(grunt) {
                 }
             }
         },
-        watch: {
+        watch: { // Watch https://github.com/gruntjs/grunt-contrib-watch
             scripts: {
-                files: ['app/*.js'],
+                files: ['Gruntfile.js', 'app/*.js'],
                 tasks: ['build'],
                 options: {
                     spawn: false,
                 },
             },
         },
+        // grunt-contrib-jshint pro statickou kontrolu https://github.com/gruntjs/grunt-contrib-jshint
+        jshint: {
+            all: ['Gruntfile.js', 'app/*.js']
+        }
     });
 
     // Build task.
     grunt.registerTask('build', [
+        'jshint',
         'closure-compiler',
         'cssmin',
         'htmlmin'
     ]);
 
-    // Build task.
+    // Default task.
     grunt.registerTask('default', ['watch']);
 
 
