@@ -1,9 +1,4 @@
 var Calc = (function() {
-	var DIVIDE = 247;
-	var MULTIPLY = 215;
-	var SUBTRACT = 45;
-	var ADD = 43;
-
 	var MIN_RESULT_FONT_SIZE = 16;
 	var MAX_CHARS_SHOWABLE_IN_RESULT_INPUT = 1000;
 
