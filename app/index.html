@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name='HandheldFriendly' content='true' />
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no' />
+<title>Calculator</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+<div id="container">
+<input id="resultInput" type="text" value="" />
+<table id="basic" cellpadding="0" cellspacing="0">	
+	<tr>
+		<td><button data-keypress="47" data-char="&#247;">&#247;</button></td>
+		<td><button data-keypress="42" data-char="&#215;">&#215;</button></td>
+		<td><button data-keypress="45" data-char="&#45;">&#151;</button></td>
+		<td><button data-keypress="43" data-char="&#43;">&#43;</button></td>
+	</tr>
+	<tr>
+		<td><button data-keypress="55" data-char="7">7</button></td>
+		<td><button data-keypress="56" data-char="8">8</button></td>
+		<td><button data-keypress="57" data-char="9">9</button></td>
+		<td><button data-keydown="8" id="backspace">&laquo;</button></td>
+	</tr>
+	<tr>
+		<td><button data-keypress="52" data-char="4">4</button></td>
+		<td><button data-keypress="53" data-char="5">5</button></td>
+		<td><button data-keypress="54" data-char="6">6</button></td>
+		<td><button data-keydown="46" id="clear">C</button></td>
+	</tr>
+	<tr>
+		<td><button data-keypress="49" data-char="1">1</button></td>
+		<td><button data-keypress="50" data-char="2">2</button></td>
+		<td><button data-keypress="51" data-char="3">3</button></td>
+		<td rowspan="2"><button data-keydown="13" id="equals">=</button></td>
+	</tr>
+	<tr>
+		<td><button data-keypress="46" data-char=".">.</button></td>
+		<td colspan="2"><button data-keypress="48" data-char="0">0</button></td>
+	</tr>
+</table>
+<script type="text/javascript" language="javascript" src="calc.js"></script>
+</body>
+</html>

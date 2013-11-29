@@ -1,0 +1,10 @@
+{
+  "name": "simplecalc",
+  "version": "0.0.1",
+  "description": "simple calculator and grunt demo",
+  "author": "Jiri Vrany",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "~0.4.2"
+  }
+}
