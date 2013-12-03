@@ -37,7 +37,7 @@ _Gruntfile.js_ může být prozatím prázdný, naplní ho jednotlivé úkoly. N
 npm install grunt --save-dev
 ```
 
-Volba **--save-dev je velice užitečná - do konfiguračního souboru _package.json_ nám zaregistruje závislost na Gruntjs včetně verze. Takže to nemusíme řešit ručně. Konfigurační soubor bude vypadat nějak takhle: 
+Volba _--save-dev_** je velice užitečná - do konfiguračního souboru _package.json_ nám zaregistruje závislost na Gruntjs včetně verze. Takže to nemusíme řešit ručně. Konfigurační soubor bude vypadat nějak takhle: 
 
 ```json
 {
@@ -100,14 +100,16 @@ A to je celé. Od této chvíle se zase už zase můžu vesele vrtat ve zdroják
 
 ## Další úlohy
 
-Grunt toho umí opravdu hodně. [Pluginů](http://gruntjs.com/plugins/) pro jednotlivé úlohy bude hodně přes 100. Jen od samotných vývojářů Grunta - tzv. _contrib_ pluginů - je už 30. Pro daný úkol - tedy mobilní verzi existujícího skriptu se nabízí použít ještě:
+Grunt toho umí opravdu hodně. [Pluginů](http://gruntjs.com/plugins/) pro jednotlivé úlohy bude hodně přes 100. Jen od samotných vývojářů Grunta (tzv. _contrib_ pluginů) je jich už 30. Pro daný problém - tedy mobilní aplikaci jsem v úkázce použil ještě:
 
 * [grunt-contrib-cssmin](https://github.com/gruntjs/grunt-contrib-cssmin) pro minikaci css
 * [grunt-contrib-htmlmin](https://github.com/gruntjs/grunt-contrib-htmlmin) pro minifikaci html
 * [grunt-contrib-watch](https://github.com/gruntjs/grunt-contrib-watch) pro opakované spouštění úloh, pokud se změní nějaký hlídaný soubor
 * [grunt-contrib-jshint](https://github.com/gruntjs/grunt-contrib-jshint)  pro statickou kontrolu javascriptu
 
-Všechny pluginy je vhodné instalovat s přepínačem --save-dev. Všechny použité mají výbornou dokumentaci a jejich použití je vidět i z finálního konfiguračního souboru v tomto repozitáři. A samozřejmě můžem přidávat další a další pluginy dle potřeby - spouštět různé testy, [dokonce paralelně](https://github.com/sindresorhus/grunt-concurrent), ale třeba taky překládat coffee script, less... No zkrátka na co si vzpomenu.
+Všechny pluginy je vhodné instalovat s přepínačem --save-dev. Všechny použité pluginy jsou vidět ve [finální verzi konfiguračního souboru](https://github.com/jirivrany/gdgscl-grunt-demo/blob/master/Gruntfile.js) v tomto repozitáři. A všechny  mají dobrou a přehlednou dokumentaci (chtěl jsem napsat samozřejmě, ale ono to tak samozřejmé není). 
+
+Pokud by bylo třeba, šlo by přidávat další a další pluginy. Například pro spouštění různých testů ([Mocha](https://github.com/kmiyashiro/grunt-mocha), [Jasmine](https://github.com/gruntjs/grunt-contrib-jasmine), [Qunit](https://github.com/gruntjs/grunt-contrib-qunit)), [dokonce paralelně](https://github.com/sindresorhus/grunt-concurrent), překládat coffee script či less. No zkrátka na co si člověk vzpomene a ještě hromadu věcí o kterých třeba ani neví že existují.
 
 Jedním z dalších plusů celého řešení je, že pokud si uděláte klon tohoto repozitáře, stačí v adresáři napsat jen: 
 
