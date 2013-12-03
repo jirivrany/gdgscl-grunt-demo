@@ -9,19 +9,19 @@ Bylo nebylo Ramesh Nair sepsal docela pěknou javascriptovou kalkulačku viz. ht
 Na desktopu funguje bezvadně, z mobilu už je to trochu slabší, takže jsem kód trochu přepsal a ovládání pomocí
 myši a klávesnice předělal na touch události. Mimo jiné.
 
-Když se mluví o mobilech, dodávme jedním dechem, že na velikosti záleží. Na rozdíl od displeje, chceme mít přenášený kód co nejmenší. Takže proč výsledný javascript trochu nezmenšit? A co je dneska na světě lepší pro zmenšování javascriptu, než [Google Closure compiler](https://developers.google.com/closure/compiler/?hl=cs) v advanced režimu. 
+Protože LTE datové přenosy fungují jen v reklamách a 3G sítě jen na vybraných místech v Praze, chceme mít kód na mobilním zařízení co nejmenší. Nebo alespoň já. Takže proč výsledný javascript trochu nezmenšit? A co je dneska na světě lepší pro zmenšování javascriptu, než [Google Closure compiler](https://developers.google.com/closure/compiler/?hl=cs) v advanced režimu. 
 
-Closure compiler přebírá při spouštění řadu parametrů, navíc ho budu spouštět opakovně. To je úkol jak dělaný pro nějakého pomocníka. A tím je [GruntJS](http://gruntjs.com/ "Grunt JS"). 
+Closure compiler přebírá při spouštění řadu parametrů, navíc ho budu spouštět opakovně. To je úkol jak dělaný pro nějakého pomocníka. Kdysi jsem na to měl bat soubor ve Windows. Ale v linuxu mi nefunguje. Asi by se na to dal napsat bash či python skript. Ale ve světě javascriptu je dneska pomocníkem číslo jedna [GruntJS](http://gruntjs.com/ "Grunt JS").
 
 ## Začínáme 
 
-Grunt běží nad nodeJS, stejně jako všechny jeho pluginy. Je tedy potřeba mít nainstalovaný node a pro Closure compiler také Javu. Dále je potřeba nainstalovat Grunt klienta, jako globální npm balíček příkazem:
+Grunt běží nad nodeJS, stejně jako všechny jeho pluginy. Díky tomu ho můžete použít na všech platformách, pro které existuje node.js. Pro Closure compiler potřebujeme také Javu. Dále je potřeba nainstalovat Grunt klienta, jako globální npm balíček příkazem:
 
 ```bash
 npm install -g grunt-cli
 ```
 
-Dále jsou potřeba dva konfigurační soubory. Package.json nám ohlídá závislosti projektu a Gruntfile.js je hlavním konfiguračním souborem pro jednotlivé úkoly, které bude grunt řešit. Package json vytvoříme v aktuálním adresáři příkazem:
+Základem __gruntování__ jsou dva konfigurační soubory. _Package.json_ nám ohlídá závislosti projektu a _Gruntfile.js_ je hlavním konfiguračním souborem pro jednotlivé úkoly, které bude grunt řešit. Package json vytvoříme v aktuálním adresáři příkazem:
 
 ```bash
 npm init
