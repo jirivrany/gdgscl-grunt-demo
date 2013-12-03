@@ -11,7 +11,7 @@ myši a klávesnice předělal na touch události. Mimo jiné.
 
 Protože LTE datové přenosy fungují jen v reklamách a 3G sítě jen na vybraných místech v Praze, chceme mít kód na mobilním zařízení co nejmenší. Nebo alespoň já. Takže proč výsledný javascript trochu nezmenšit? A co je dneska na světě lepší pro zmenšování javascriptu, než [Google Closure compiler](https://developers.google.com/closure/compiler/?hl=cs) v advanced režimu. 
 
-Closure compiler přebírá při spouštění řadu parametrů, navíc ho budu spouštět opakovně. To je úkol jak dělaný pro nějakého pomocníka. Kdysi jsem na to měl bat soubor ve Windows. Ale v linuxu mi nefunguje. Asi by se na to dal napsat bash či python skript... 
+Closure compiler přebírá při spouštění řadu parametrů, navíc ho budu spouštět opakovaně. To je úkol jak dělaný pro nějakého pomocníka. Kdysi jsem na to měl bat soubor ve Windows. Ale v Linuxu mi nefunguje. Asi by se na to dal napsat Bash či Python skript... 
 
 Ale kdepak. Ve světě javascriptu je dneska pomocníkem číslo jedna [GruntJS](http://gruntjs.com/ "Grunt JS").
 
@@ -90,7 +90,7 @@ Konfigurace je hotová, takže můžeme překládat. Pokud je soubor _calc.js_ v
 grunt
 ```
 
-Můžeme ale pustit i konkrétní úlohu, v tomto případě tedy closure-compiler protož víc jich zatím nemáme:
+Můžeme ale pustit i konkrétní úlohu, v tomto případě tedy _closure-compiler_, víc jich zatím nemáme:
 
 ```bash
 grunt closure-compiler
@@ -100,7 +100,7 @@ A to je celé. Od této chvíle se zase už zase můžu vesele vrtat ve zdroják
 
 ## Další úlohy
 
-Grunt toho umí opravdu hodně. [Pluginů](http://gruntjs.com/plugins/) pro jednotlivé úlohy bude hodně přes 100. Jen od samotných vývojářů Grunta (tzv. _contrib_ pluginů) je jich už 30. Pro daný problém - tedy mobilní aplikaci jsem v úkázce použil ještě:
+Grunt toho umí opravdu hodně. [Pluginů](http://gruntjs.com/plugins/) pro jednotlivé úlohy bude hodně přes 100. Jen od samotných vývojářů Grunta (tzv. _contrib_ pluginů) je jich už 30. Pro daný problém - tedy mobilní aplikaci jsem v ukázce použil ještě:
 
 * [grunt-contrib-cssmin](https://github.com/gruntjs/grunt-contrib-cssmin) pro minikaci css
 * [grunt-contrib-htmlmin](https://github.com/gruntjs/grunt-contrib-htmlmin) pro minifikaci html
@@ -118,7 +118,7 @@ Jedním z dalších plusů celého řešení je, že pokud si uděláte klon toh
 npm install
 ```
 
-Grunt a všechny další pluginy se nainstalují tak, jak jim to určil konfigurační soubor. Stačí tedy jen přirad Closure compiler a vše je připraveno k práci - na jiném počítači, u kolegy v týmu a tak dále. 
+Grunt a všechny další pluginy se nainstalují tak, jak jim to určil konfigurační soubor. Stačí tedy jen přidat Closure compiler (bower task jsem pro něj zatím nenašel) a vše je připraveno k práci - na jiném počítači, u kolegy v týmu a tak dále. 
 
 Grunt je výborný nástroj, který vás odstíní od nudné a rutinní činnosti a umožní vám se soustředit na to, co je na vývoji aplikací zábavné - tedy samotné programování. Tak se nebojte a začněte __gruntovat__.
 
