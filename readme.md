@@ -17,12 +17,12 @@ Closure compiler přebírá při spouštění řadu parametrů, navíc ho budu s
 
 Grunt běží nad nodeJS, stejně jako všechny jeho pluginy. Je tedy potřeba mít nainstalovaný node a pro Closure compiler také Javu. Dále je potřeba nainstalovat Grunt klienta, jako globální npm balíček příkazem:
 
-'''bash
+```bash
 npm install -g grunt-cli
 
 Dále jsou potřeba dva konfigurační soubory. Package.json nám ohlídá závislosti projektu a Gruntfile.js je hlavním konfiguračním souborem pro jednotlivé úkoly, které bude grunt řešit. Package json vytvoříme v aktuálním adresáři příkazem:
 
-'''bash
+```bash
 npm init
 
 Gruntfile.js může být prozatím prázdný, naplní ho jednotlivé úkoly.  
