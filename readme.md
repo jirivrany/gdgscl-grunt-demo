@@ -25,19 +25,19 @@ Nejprve je potřeba nainstalovat Grunt klienta a to jako jako globální npm bal
 npm install -g grunt-cli
 ```
 
-Základem __gruntování__ jsou dva konfigurační soubory. _Package.json_ nám ohlídá závislosti projektu a _Gruntfile.js_ je hlavním konfiguračním souborem pro jednotlivé úkoly, které bude grunt řešit. Package json vytvoříme v aktuálním adresáři příkazem:
+Základem __gruntování__ jsou dva konfigurační soubory. _Package.json_ nám ohlídá závislosti projektu a _Gruntfile.js_ je hlavním konfiguračním souborem pro jednotlivé úkoly, které bude Grunt řešit. Package json vytvoříme v aktuálním adresáři příkazem:
 
 ```bash
 npm init
 ```
 
-_Gruntfile.js_ může být prozatím prázdný, naplní ho jednotlivé úkoly. Nejprve ale potřebujeme samotný grunt task aby je měl kdo vykonávat. 
+_Gruntfile.js_ může být prozatím prázdný, naplní ho jednotlivé úkoly. Nejprve ale potřebujeme samotný grunt-task aby je měl kdo vykonávat. 
 
 ```bash
 npm install grunt --save-dev
 ```
 
-Volba **--save-dev je velice užitečná - do konfiguračního souboru _package.json_ nám zaregistruje závislost na gruntjs včetně verze. Takže to nemusíme řešit ručně. Konfigurační soubor bude vypadat nějak takhle: 
+Volba **--save-dev je velice užitečná - do konfiguračního souboru _package.json_ nám zaregistruje závislost na Gruntjs včetně verze. Takže to nemusíme řešit ručně. Konfigurační soubor bude vypadat nějak takhle: 
 
 ```json
 {
@@ -84,7 +84,7 @@ module.exports = function(grunt) {
 ```
 Grunt pracuje jako NodeJS modul, a celá konfigurace je uzavřena do JS funkce. Základní konfigurační direktivy jsou _loadNpmTask_ - pro načtení úlohy, _initConfig_ - pro konfigurace a _registerTask_, pro vytváření komplexnějších úloh složených z několika úkolů. Načítání jednotlivých npm lze automatizovat za pomocí package.json, ale pro začátek je to takto přehlednější. 
 
-Konfigurace je hotová, takže můžeme překládat. Pokud je soubor _calc.js_ v adresáři app správně anotovaný a přeložitelný, objeví se nám výsledek v adresáři dist. Ale až po té, co pustíme grunt. A protože máme registrovaný výchozí task - default, stačí k tomu jen příkaz:
+Konfigurace je hotová, takže můžeme překládat. Pokud je soubor _calc.js_ v adresáři app správně anotovaný a přeložitelný, objeví se nám výsledek v adresáři dist. Samozřejmě, že až po té co úlohu spustíme. A protože máme registrovaný výchozí task - _default_, stačí k tomu jen příkaz:
 
 ```bash
 grunt
