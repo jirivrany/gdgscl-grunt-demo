@@ -1,10 +1,9 @@
-GruntJS - příklad použití
-==========================
+# GruntJS - příklad použití
+
 Tento repozitář obsahuje příklad použití Grunt JS pro automatizaci rutinních činností, předvedený na 
 setkání GDG SCL Liberec 5.12.
 
-Story
-=====
+## Story
 Bylo nebylo Ramesh Nair sepsal docela pěknou javascriptovou kalkulačku viz. http://calc.hiddentao.com/
 
 Na desktopu funguje bezvadně, z mobilu už je to trochu slabší, takže jsem kód trochu přepsal a ovládání pomocí
@@ -14,5 +13,18 @@ Když se mluví o mobilech, dodávme jedním dechem, že na velikosti záleží.
 
 Closure compiler přebírá při spouštění řadu parametrů, navíc ho budu spouštět opakovně. To je úkol jak dělaný pro nějakého pomocníka. A tím je [GruntJS](http://gruntjs.com/ "Grunt JS"). 
 
-Začínáme
-========
+## Začínáme 
+
+Grunt běží nad nodeJS, stejně jako všechny jeho pluginy. Je tedy potřeba mít nainstalovaný node a pro Closure compiler také Javu. Dále je potřeba nainstalovat Grunt klienta, jako globální npm balíček příkazem:
+
+'''bash
+npm install -g grunt-cli
+
+Dále jsou potřeba dva konfigurační soubory. Package.json nám ohlídá závislosti projektu a Gruntfile.js je hlavním konfiguračním souborem pro jednotlivé úkoly, které bude grunt řešit. Package json vytvoříme v aktuálním adresáři příkazem:
+
+'''bash
+npm init
+
+Gruntfile.js může být prozatím prázdný, naplní ho jednotlivé úkoly.  
+
+
